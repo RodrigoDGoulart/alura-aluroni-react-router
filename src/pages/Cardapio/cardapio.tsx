@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Filtros from './Filtros/filtros';
 import { OpcoesOrdenador, Ordenador } from './Ordenador/ordenador';
 import Itens from './Itens/itens';
+import Menu from 'components/Menu/menu';
 
 export default function Cardapio() {
 
@@ -14,10 +15,7 @@ export default function Cardapio() {
 
   return (
     <main>
-      <nav className={styles.menu}>
-        <Logo />
-      </nav>
-
+      <Menu />
       <header className={styles.header}>
         <div className={styles.header__text}>
           A casa do código e da massa
