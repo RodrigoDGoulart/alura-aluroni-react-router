@@ -1,11 +1,10 @@
 import styles from './Cardapio.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg';
 import Buscador from './Buscador/buscador';
 import { useState } from 'react';
 import Filtros from './Filtros/filtros';
 import { OpcoesOrdenador, Ordenador } from './Ordenador/ordenador';
 import Itens from './Itens/itens';
-import Menu from 'components/Menu/menu';
+import stylesTema from 'styles/Tema.module.scss'
 
 export default function Cardapio() {
 
@@ -16,7 +15,7 @@ export default function Cardapio() {
   return (
     <main>
       <section className={styles.cardapio}>
-        <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+        <h3 className={stylesTema.titulo}>Cardápio</h3>
         <Buscador
           busca={busca}
           setBusca={setBusca}
