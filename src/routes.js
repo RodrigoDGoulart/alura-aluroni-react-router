@@ -1,3 +1,4 @@
+import Footer from 'components/Footer/footer';
 import Menu from 'components/Menu/menu';
 import PaginaPadrao from 'components/PaginaPadrao/paginaPadrao';
 import Cardapio from 'pages/Cardapio/cardapio';
@@ -18,6 +19,8 @@ export default function AppRouter() {
             <Route path='sobre' element={<Sobre />} />  
           </Route>
         </Routes>
+
+        <Footer />
       </Router>
     </main>
   )
