@@ -1,7 +1,6 @@
 import styles from './Item.module.scss';
-import cardapio from 'data/cardapio.json';
-import classNames from 'classnames';
 import { Prato } from 'types/Prato';
+import TagsPrato from 'components/TagsPrato/tagsPrato';
 
 export default function Item(props: Prato) {
   return (
@@ -14,23 +13,7 @@ export default function Item(props: Prato) {
           <h2>{props.title}</h2>
           <p>{props.description}</p>
         </div>
-        <div className={styles.item__tags}>
-          <div className={classNames({
-            [styles.item__tipo]: true,
-            [styles[`item__tipo__${props.category.label.toLocaleLowerCase()}`]]: true
-          })}>
-            {props.category.label}
-          </div>
-          <div className={styles.item__porcao}>
-            {props.size}g
-          </div>
-          <div className={styles.item__qtdpessoas}>
-                        Serve {props.serving} pessoa{!(props.serving === 1) && 's'}
-          </div>
-          <div className={styles.item__valor}>
-                        R$ {props.price.toFixed(2)}
-          </div>
-        </div>
+        <TagsPrato {...props} />
       </div>
     </div>
   );
